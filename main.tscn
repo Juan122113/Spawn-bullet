@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://btpex8sm32m4a"]
+
+[ext_resource type="PackedScene" uid="uid://c02pjkjg8ck7c" path="res://Managers/projectile_manager.tscn" id="1_h62hw"]
+[ext_resource type="PackedScene" uid="uid://brrusxofg4set" path="res://Turret/turret.tscn" id="1_my6r5"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Level_container" type="Node2D" parent="."]
+
+[node name="Manager_Container" type="Node2D" parent="."]
+
+[node name="Projectile_Manager" parent="Manager_Container" instance=ExtResource("1_h62hw")]
+
+[node name="Proyectile_container" type="Node2D" parent="." groups=["Projectile_container"]]
+
+[node name="Entity_container" type="Node2D" parent="."]
+
+[node name="Turret" parent="Entity_container" instance=ExtResource("1_my6r5")]
+position = Vector2(590, 304)
+fire_rate = 0.01
+
+[node name="Camera_container" type="Node2D" parent="."]

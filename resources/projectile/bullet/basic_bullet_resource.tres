@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ProjectileBaseResource" load_steps=3 format=3 uid="uid://nsc2rrt43lw"]
+
+[ext_resource type="Texture2D" uid="uid://ddce2oqcc7p0a" path="res://Assets/kenney_pixel-shmup/Tiles/tile_0002.png" id="1_f4sev"]
+[ext_resource type="Script" path="res://resources/projectile/Projectile_Base_Resource.gd" id="1_jcuvl"]
+
+[resource]
+script = ExtResource("1_jcuvl")
+projectile_sprite = ExtResource("1_f4sev")
+projectile_speed = 250.0

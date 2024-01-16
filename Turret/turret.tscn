@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://brrusxofg4set"]
+
+[ext_resource type="Script" path="res://Turret/turret.gd" id="1_51mri"]
+[ext_resource type="Texture2D" uid="uid://bdytx5pk77nq4" path="res://Assets/kenney_pixel-shmup/Tiles/tile_0018.png" id="1_lg3ac"]
+[ext_resource type="Resource" uid="uid://nsc2rrt43lw" path="res://resources/projectile/bullet/basic_bullet_resource.tres" id="2_x4mdb"]
+[ext_resource type="PackedScene" uid="uid://dn6oh5pimodls" path="res://Handlers/tracking_handler.tscn" id="3_du7le"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fv8ci"]
+size = Vector2(8, 13)
+
+[node name="Turret" type="CharacterBody2D"]
+texture_filter = 1
+script = ExtResource("1_51mri")
+projectil_resource = ExtResource("2_x4mdb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.57079
+scale = Vector2(5, 5)
+texture = ExtResource("1_lg3ac")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_fv8ci")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="TrackingHandler" parent="." instance=ExtResource("3_du7le")]

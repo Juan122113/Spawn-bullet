@@ -1,0 +1,7 @@
+res://main.tscn
+res://Managers/projectile_manager.gd
+res://Turret/turret.tscn
+res://Handlers/tracking_handler.tscn
+res://bullet/bullet.tscn
+res://Managers/projectile_manager.tscn
+res://Turret/turret.gd
